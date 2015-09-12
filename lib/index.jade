@@ -17,23 +17,11 @@ html(lang='es')
       //IMAGEN DEL PERSONAJE
       img(class='card__image' src='./public/images/card1.jpg', alt='Image')
 
-      //ARTÍCULO DEL PERSONAJE
-      article(class='review')
-        h2(class='review__name') Yesenia Yamileth
-        h3(class='review__city') San Francisco
-        p(class='review__content') Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+      //INCLUDE DEL COMPONENTE REVIEW
+      include ./review/review.jade
 
-      //BOTÓN FAB
-      div(class='fab')
-        input(class='fab__checkbox' id='fabCheck' type='checkbox' checked='true')
-        label(class='fab__label' for='fabCheck') +
-        
-        //SECCIÓN DE REDES SOCIALES
-        div(class='social')
-          a(class='social__link' href='#') F
-          a(class='social__link' href='#') T
-          a(class='social__link' href='#') D
-          a(class='social__link' href='#') I
-          
+      //INCLUDE DEL COMPONENTE FAB
+      include ./fab/fab.jade
+
   //-INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
   link(rel='stylesheet' type='text/css' href='./public/css/index.min.css')
