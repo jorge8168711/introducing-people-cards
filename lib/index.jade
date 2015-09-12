@@ -14,14 +14,11 @@ html(lang='es')
 
   body
     div(class='card')
-      //IMAGEN DEL PERSONAJE
+      //- IMAGEN DEL PERSONAJE
       img(class='card__image' src='./public/images/card1.jpg', alt='Image')
 
-      //INCLUDE DEL COMPONENTE REVIEW
+      //- INCLUDE DEL COMPONENTE REVIEW
       include ./review/review.jade
-
-      //INCLUDE DEL COMPONENTE FAB
-      include ./fab/fab.jade
-
+  
   //-INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
   link(rel='stylesheet' type='text/css' href='./public/css/index.min.css')
