@@ -13,7 +13,15 @@ html(lang='es')
       include ./primary-css/primary-css.css
 
   body
-    h2 Inicio del proyecto
+    div(class='card')
+      //IMAGEN DEL PERSONAJE
+      img(class='card__image' src='./public/images/card1.jpg', alt='Image')
+
+      //INCLUDE DEL COMPONENTE REVIEW
+      include ./review/review.jade
+
+      //INCLUDE DEL COMPONENTE FAB
+      include ./fab/fab.jade
 
   //-INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
   link(rel='stylesheet' type='text/css' href='./public/css/index.min.css')
