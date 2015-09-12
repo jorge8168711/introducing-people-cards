@@ -1,0 +1,186 @@
+/**
+ *******************************************************************************
+ **************************--DESCRIPCIÓN DEL PROYECTO--*************************
+ *******************************************************************************
+ * CONJUNTO VARIABLES, ESTILOS Y MIXINS BASADOS EN LAS ESPECIFICACIONES DE
+ * MATERIAL DESIGN DE GOOGLE.
+ */
+
+
+
+
+// VARIABLES
+// =============================================================================
+
+/**
+ **  SHADOWS
+ **------------------------------------------*/
+$z-depth-0        = 1px solid rgba(207, 217, 221, 0.2)
+$z-depth-1        = 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+$z-depth-1-hover  = 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+$z-depth-2        = 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+$z-depth-3        = 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19)
+$z-depth-4        = 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21)
+$z-depth-5        = 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22)
+
+/**
+ **  BACKGROUND COLORS
+ **------------------------------------------*/
+
+//__________________________________________________________________________________
+// 700s         - Barra de status.
+// 500s         - Barras de herramientas y bloques de color más grandes.
+// 300s         - Información secundaría.
+// Accent colors - Colores contrastantes, FAB y componentes como switches o sliders.
+//__________________________________________________________________________________
+$dark-primary-color    = #455A64 //700s
+$default-primary-color = #607D8B //500s
+$light-primary-color   = #CFD8DC //300s
+$accent-color          = #82B1FF //Color OCn
+
+$light-theme = #EEEEEE
+$dark-theme  = #212121
+
+/**
+ **  FONT COLORS
+ **------------------------------------------*/
+//light theme font colors
+$font-light-primary    = rgba(black,.87) //87% de negro
+$font-light-secondary  = rgba(black,.54) //54% de negro
+$font-light-disabled   = rgba(black,.26) //26% de negro
+
+//dark theme font colors
+$font-dark-primary    = #FFFFFF//100% de blanco
+$font-dark-secondary  = rgba(#FFFFFF,.70) //70% de blanco
+$font-dark-disabled   = rgba(#FFFFFF,.30) //30% de blanco
+
+//miscellaneous
+$white-1 = #fafafa
+$white-2 = #dedede
+
+/**
+ **  BORDERS
+ **------------------------------------------*/
+$border-1 = 1px solid #e0e0e0
+
+/**
+ **  PREFIXES
+ **------------------------------------------*/
+$vendor-prefixes = o ms moz webkit
+
+
+
+
+// MIXINS
+// =============================================================================
+
+/**
+ **  SHADOWS MIXIN
+ **------------------------------------------*/
+MaterialShadow(level)
+  if level == 0
+    border 1px solid rgba(207, 217, 221, 0.2)
+
+  else if level == 1
+    box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+
+  else if level == '1-hover'
+    box-shadow 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+
+  else if level == 2
+    box-shadow 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+  else if level == 3
+    box-shadow 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19)
+
+  else if level == 4
+    box-shadow 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21)
+
+  else
+    box-shadow 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22)
+
+/**
+ **  TEXT MIXIN
+ **------------------------------------------*/
+MaterialText(style)
+  style = 'text-' + style
+
+  if style == 'text-display-4'
+    font-size 112px
+    font-weight 300
+    letter-spacing -5px
+    line-height 120px //no esta en los guidelines
+
+  else if style == 'text-display-3'
+    font-size 56px
+    font-weight 400
+    line-height 64px //no esta en los guidelines
+
+  else if style == 'text-display-2'
+    font-size 45px
+    font-weight 400
+    line-height 48px
+
+  else if style == 'text-display-1'
+    font-size 34px
+    font-weight 400
+    line-height 40px
+
+  else if style == 'text-headline'
+    font-size 24px
+    font-weight 400
+    line-height 32px
+
+  else if style == 'text-title'
+    font-size 20px
+    font-weight 500
+    line-height 44px
+
+  else if style == 'text-subhead-2'
+    font-size 16px
+    font-weight 400
+    line-height 28px
+
+  else if style == 'text-subhead-1'
+    font-size 16px
+    font-weight 400
+    line-height 24px
+
+  else if style == 'text-body-2' //Menu
+    font-size 14px
+    font-weight 500
+    line-height 24px
+
+  else if style == 'text-body-1'
+    font-size 14px
+    font-weight 400
+    line-height 20px
+
+  else if style == 'text-caption'
+    font-size 12px
+    font-weight 400
+    line-height 18px //no esta en los guidelines
+
+  else if style == 'text-button'
+    font-size 14px
+    font-weight 500
+    line-height 20px //no esta en los guidelines
+    text-transform uppercase
+
+  else if style == 'text-menu'
+    font-size 14px
+    font-weight 500
+    line-height 20px
+
+MaterialDivider()
+  height 1px
+  overflow hidden
+  background-color #e0e0e0
+
+/**
+ **  DIVIDER MIXIN
+ **------------------------------------------*/
+MaterialDivider()
+  height 1px
+  overflow hidden
+  background-color #e0e0e0

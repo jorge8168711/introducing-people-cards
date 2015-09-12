@@ -1,0 +1,73 @@
+/**
+ *******************************************************************************
+ **************************--DESCRIPCIÓN DEL PROYECTO--*************************
+ *******************************************************************************
+ *
+ *
+ * CONVENCIONES PARA LOS NOMBRES DE LAS CLASES
+ * =============================================================================
+ * BEM es una metodología para nombrar y clasificar selectores CSS de manera que
+ * los hacemos más estrictos, transparentes e informativos.
+ *
+ *     La convención de nombre sigue este patrón:
+ *         .bloque{}
+ *         .bloque__elemento{}
+ *         .bloque--modificador{}
+ *
+ *
+ * DESCRIPCIÓN DE LA DIVISIÓN DE LOS ESTILOS DEL PROYECTO.
+ * =============================================================================
+ * Los estilos del proyecto se dividen en dos archivos, estos 2 archivos
+ * únicamente contienen los imports de las fuentes, iconfonts, normalize y los
+ * estilos de todos los componentes del proyecto, esto se hace con el fin de
+ * optimizar la entrega de CSS ya que los estilos de la parte superior de la
+ * página se colocan en una etiqueta <style> en el archivo HTML del home de la
+ * página y los estilos restantes del sitio se colocan en el archivo index.html
+ * al final de la etiqueta <html> de esta manera no se se detiene la lectutura
+ * del html y el contenido de la parte superior del sitio se visualiza de
+ * inmediato junto con los estilos necesarios para la parte superior que es la
+ * parte que se el usuario visualiza de inmediato.
+ *
+ *    [PRIMARY-CSS.STYL]: Este archivo contiene los imports de los estilos
+ *        principales del proyecto que sirven para OPTIMIZAR LA ENTREGA DE CSS
+ *        según google, basado en el análisis de PageSpeed-Insights.
+ *        Los estilos contenidos en este archivo se compilan y se colocan en
+ *        la etiqueta HEAD dentro de una etiqueta style, esto se
+ *        hace con la finalidad de priorizar la carga del contenido superior
+ *        de la página.
+ *
+ *    [INDEX.STYL]: Este archivo contiene los estilos que no son prioridad para
+ *        el contenido superior de la página.
+ *        Este archivo se compila en el archivo index.min.css que se coloca en
+ *        la etiqueta <link/> justo debajo de donde se cierra la etiqueta
+ *        <body/>
+ *        Esto se hace con la finalidad de no retrasar la carga del HTML.
+ *
+ *
+ * NOTA:
+ *   Estos archivos únicamente contienen los imports y la descripción de
+ *   todos los componentes que estructuran el proyecto.
+ *
+ *   Los archivos que que tienen el sufijo [NOMBRE-DEL-ARCHIVO]-primary.styl son
+ *   de componentes que tienen clases que no son primordiales para que se vea
+ *   correctamente la parte superior de la página, como animaciones, o estilos
+ *   que se encarguen de la interacción de la página. El código de estos
+ *   componentes se divide en dos partes, la que se manda al archivo
+ *   index.html y la que se manda al archivo primary-css.css, de esta manera se
+ *   reduce la cantidad de código que se coloca en la parte superior del archivo
+ *   index.html, colocando únicamente el código necesario para que se visulice
+ *   correctamente la parte superior de la página. El código restante se manda
+ *   al archivo index.styl que se aplica una vez que el navegador a terminado de
+ *   leer todo el archivo HTML de esta manera se optimiza la entrega de css.
+ *
+ *
+ * ORDÉN EN EL QUE SE COMPILA EL CÓDIGO DEL PROYECTO
+ * =============================================================================
+ * 1. Variables & Mixins....Variables de color, sombras y Mixins.
+ * 2. Normalize....Normalizando estilos, zona cero.
+ * 3. Elementos sin clase...Estilos de etiquetas sin clase.
+ * 4. Utilidades...Patrones de diseño genéricos.
+ * 5. Imports de fuentes y icon fonts.
+ * 6. Componentes...Elementos construidos a partir de objetos y sus extensiones.
+ *
+ */
