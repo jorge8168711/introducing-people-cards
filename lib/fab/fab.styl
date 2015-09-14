@@ -1,18 +1,17 @@
 .fab
-  display block
-  width 12em
-  height 3em
-  border-top 1px solid gray
-  background-color white
-  position absolute
+  border-top 1px solid $font-light-disabled
   bottom 0
+  display block
+  height 3em
+  position absolute
   right 0
+  width 12em
 
   &__checkbox
     display none
 
   &__label
-    background-color gray
+    background-color $accent-color
     border-radius 50%
     color white
     cursor pointer
@@ -23,3 +22,11 @@
     text-align center
     top -21px
     width 42px
+
+  &__checkbox:checked + .fab__label
+    border-radius 0
+    color rgba(255,255,255,0)
+    height 100%
+    left 0
+    top 0
+    width 100%

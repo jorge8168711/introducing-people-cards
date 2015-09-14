@@ -1,12 +1,33 @@
 .social
-  background-color $accent-color
-  display block
+  bottom 0
+  display none
   height 3em
+  position absolute
+  right 0
+  width 100%
 
   &__link
     color white
     display inline-block
+    font-size 24px
     height 100%
     line-height 48px
     text-align center
+    text-decoration none
+    vertical-align top
     width 25%
+
+  &__link::after
+    font-family 'Material-Design-Iconic-Font'
+
+  &__link:nth-child(1)::after
+    content '\f343'
+
+  &__link:nth-child(odd)
+    background-color rgba(white, .1)
+
+  &__link:nth-child(even)
+    background-color rgba(white, .3)
+
+.fab__checkbox:checked + .fab__label + .social
+  display block
