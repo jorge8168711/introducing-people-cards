@@ -13,15 +13,64 @@ html(lang='es')
       include ./primary-css/primary-css.css
 
   body
-    div(class='card')
-      //IMAGEN DEL PERSONAJE
-      img(class='card__image' src='./public/images/card1.jpg', alt='Image')
+    div(class='wrapper')
+      //- CARD1
+      div(class='card')
+        //- IMAGEN DEL PERSONAJE
+        img(class='card__image' src='./public/images/card1.jpg', alt='Image')
 
-      //INCLUDE DEL COMPONENTE REVIEW
-      include ./review/review.jade
+        //- REVIEW DEL PERSONAJE
+        article(class='review')
+          h2(class='review__name') Yesenia Yamileth
+          h3(class='review__city') Founder & chief executive officer, Mars
+          p(class='review__content') Daughter of Aphrodite and great mother, expert on javascript development, small review about this incredible person, i hope you be useful for you.
 
-      //INCLUDE DEL COMPONENTE FAB
-      include ./fab/fab.jade
+        //- REDES SOCIALES
+        div(class='social')
+          a(class='social__link' href='https://www.facebook.com' target='_blank')
+          a(class='social__link' href='https://www.twitter.com/' target='_blank')
+          a(class='social__link' href='https://www.dribbble.com/' target='_blank')
+          a(class='social__link' href='https://www.instagram.com/' target='_blank')
+      
+      //- CARD2
+      div(class='card')
+        //- IMAGEN DEL PERSONAJE
+        img(class='card__image' src='./public/images/card2.jpg', alt='Image')
 
-  //-INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
-  link(rel='stylesheet' type='text/css' href='./public/css/index.min.css')
+        //- REVIEW DEL PERSONAJE
+        article(class='review')
+          h2(class='review__name') John Parker 
+          h3(class='review__city') Vice president & engineering, The moon
+          p(class='review__content') Daughter of Aphrodite and great mother, expert on javascript development, small review about this incredible person, i hope you be useful for you.
+
+        //- REDES SOCIALES
+        div(class='social')
+          a(class='social__link' href='https://www.facebook.com' target='_blank')
+          a(class='social__link' href='https://www.twitter.com/' target='_blank')
+          a(class='social__link' href='https://www.dribbble.com/' target='_blank')
+          a(class='social__link' href='https://www.instagram.com/' target='_blank')
+      
+      //- CARD3
+      div(class='card')
+        //- IMAGEN DEL PERSONAJE
+        img(class='card__image' src='./public/images/card3.jpg', alt='Image')
+
+        //- REVIEW DEL PERSONAJE
+        article(class='review')
+          h2(class='review__name') Dan Lee
+          h3(class='review__city') Chief creative officer, Tokyo
+          p(class='review__content') Daughter of Aphrodite and great mother, expert on javascript development, small review about this incredible person, i hope you be useful for you.
+
+        //- REDES SOCIALES
+        div(class='social')
+          a(class='social__link' href='https://www.facebook.com' target='_blank')
+          a(class='social__link' href='https://www.twitter.com/' target='_blank')
+          a(class='social__link' href='https://www.dribbble.com/' target='_blank')
+          a(class='social__link' href='https://www.instagram.com/' target='_blank')
+
+  //- INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
+  link(rel='stylesheet' type='text/css' href='./public/css/main.min.css')
+
+  //- JAVASCRIPT
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+  script(src='./public/js/main.min.js')

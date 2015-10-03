@@ -1,0 +1,71 @@
+.social
+  background-color transparent
+  border-radius 0 0 2px 0
+  visibility hidden
+  bottom -40px
+  height 40px
+  right -16px
+  position absolute
+  text-align right
+  width 208px
+
+  /.card:hover > .social
+    visibility visible
+
+  /.card:hover > .social > .social__link
+    transform scale(1)
+    border-radius 0
+
+  &__link
+    border-bottom 4px solid rgba(#FF931E, 0)
+    border-radius 50%
+    box-sizing border-box
+    color white
+    display inline-block
+    font-size 24px
+    height 40px
+    line-height 40px
+    text-align center
+    text-decoration none
+    transform scale(0)
+    width 52px
+
+  &__link:nth-child(1)
+    transition transform .11s linear .56s
+
+  &__link:nth-child(2)
+    transition transform .11s linear .46s
+
+  &__link:nth-child(3)
+    transition transform .11s linear .36s
+
+  &__link:nth-child(4)
+    border-radius 0 0 2px 0
+    transition transform .11s linear .25s
+
+  &__link:hover
+    border-bottom 4px solid rgba(#FF931E, 1)
+
+  &__link::after
+    font-family 'Material-Design-Iconic-Font'
+
+  &__link:nth-child(1)::after
+    content '\f343'
+
+  &__link:nth-child(2)::after
+    content '\f360'
+
+  &__link:nth-child(3)::after
+    content '\f33f'
+
+  &__link:nth-child(4)::after
+    content '\f34f'
+
+  &__link:nth-child(odd)
+    background-color rgba(white, .1)
+
+  &__link:nth-child(even)
+    background-color rgba(white, .3)
+
+.fab__checkbox:checked + .fab__label + .social
+  display block
