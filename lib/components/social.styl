@@ -1,0 +1,77 @@
+/**  COMPONENTE SOCIAL
+ **------------------------------------------*/
+.social
+  bottom -40px
+  position absolute
+  right -16px
+  text-align right
+  width 208px
+
+  //hover que activa la caja que contiene los iconos
+  /.card:hover > .social
+    height 40px
+    visibility visible
+
+  &__link
+    border-radius 50%
+    box-sizing border-box
+    color white
+    display inline-block
+    font-size 24px
+    height 40px
+    line-height 40px
+    position relative
+    text-align center
+    text-decoration none
+    transform scale(0)
+    width 52px
+
+    //hover que avtiva los iconos de los links
+    /.card:hover > .social > .social__link
+      border-radius 0
+      transform scale(1)
+
+    //borde del hover de los links
+    &::before
+      background-color $accent-color
+      bottom 0
+      content ''
+      height 3px
+      left 50%
+      position absolute
+      transition all .2s linear
+      width 0
+
+    //hover que activa el borde de los links
+    &:hover:before
+      left 0
+      width 100%
+
+    //link transitions
+    &:nth-child(1)
+      transition all .15s linear .65s
+    &:nth-child(2)
+      transition all .15s linear .5s
+    &:nth-child(3)
+      transition all .15s linear .35s
+    &:nth-child(4)
+      border-radius 0 0 2px 0
+      transition all .15s linear .2s
+
+    //link IconFonts
+    &::after
+      font-family 'Material-Design-Iconic-Font'
+    &:nth-child(1)::after
+      content '\f343'
+    &:nth-child(2)::after
+      content '\f360'
+    &:nth-child(3)::after
+      content '\f33f'
+    &:nth-child(4)::after
+      content '\f34f'
+
+    //link backgrounds
+    &:nth-child(odd)
+      background-color rgba(white, .1)
+    &:nth-child(even)
+      background-color rgba(white, .3)

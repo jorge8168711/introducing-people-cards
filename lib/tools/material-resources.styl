@@ -6,14 +6,11 @@
  * MATERIAL DESIGN DE GOOGLE.
  */
 
-
-
-
+// =============================================================================
 // VARIABLES
 // =============================================================================
 
-/**
- **  SHADOWS
+/** SHADOWS
  **------------------------------------------*/
 $z-depth-0        = 1px solid rgba(207, 217, 221, 0.2)
 $z-depth-1        = 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
@@ -23,59 +20,60 @@ $z-depth-3        = 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 
 $z-depth-4        = 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21)
 $z-depth-5        = 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22)
 
-/**
- **  BACKGROUND COLORS
+/**  BACKGROUND COLORS
  **------------------------------------------*/
-
-//__________________________________________________________________________________
 // 700s         - Barra de status.
 // 500s         - Barras de herramientas y bloques de color más grandes.
 // 300s         - Información secundaría.
 // Accent colors - Colores contrastantes, FAB y componentes como switches o sliders.
 //__________________________________________________________________________________
-$dark-primary-color    = #455A64 //700s
-$default-primary-color = #607D8B //500s
-$light-primary-color   = #CFD8DC //300s
-$accent-color          = #82B1FF //Color OCn
 
-$light-theme = #EEEEEE
-$dark-theme  = #212121
+// Main Colors
+$dark-primary-color    = #0288D1 //700s
+$default-primary-color = #03A9F4 //500s
+$light-primary-color   = #4FC3F7 //300s
+$accent-color          = #FFD740 //Color accent
 
-/**
- **  FONT COLORS
+// Grey Colors
+$grey-50  = #FAFAFA
+$grey-100 = #F5F5F5
+$grey-200 = #EEEEEE //google grey-dark.theme
+$grey-300 = #E0E0E0
+$grey-400 = #BDBDBD
+$grey-500 = #9E9E9E
+$grey-600 = #757575
+$grey-700 = #616161
+$grey-800 = #424242
+$grey-900 = #212121 //light.theme
+
+/**  FONT COLORS
  **------------------------------------------*/
-//light theme font colors
+// light theme font colors
 $font-light-primary    = rgba(black,.87) //87% de negro
 $font-light-secondary  = rgba(black,.54) //54% de negro
 $font-light-disabled   = rgba(black,.26) //26% de negro
 
-//dark theme font colors
+// dark theme font colors
 $font-dark-primary    = #FFFFFF//100% de blanco
 $font-dark-secondary  = rgba(#FFFFFF,.70) //70% de blanco
 $font-dark-disabled   = rgba(#FFFFFF,.30) //30% de blanco
 
 //miscellaneous
-$white-1 = #fafafa
 $white-2 = #dedede
 
-/**
- **  BORDERS
+/**  BORDERS
  **------------------------------------------*/
 $border-1 = 1px solid #e0e0e0
 
-/**
- **  PREFIXES
+/**  PREFIXES
  **------------------------------------------*/
 $vendor-prefixes = o ms moz webkit
 
-
-
-
+// =============================================================================
 // MIXINS
 // =============================================================================
 
-/**
- **  SHADOWS MIXIN
+/**  SHADOWS MIXIN
  **------------------------------------------*/
 MaterialShadow(level)
   if level == 0
@@ -99,8 +97,7 @@ MaterialShadow(level)
   else
     box-shadow 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22)
 
-/**
- **  TEXT MIXIN
+/**  TEXT MIXIN
  **------------------------------------------*/
 MaterialText(style)
   style = 'text-' + style
@@ -177,8 +174,7 @@ MaterialDivider()
   overflow hidden
   background-color #e0e0e0
 
-/**
- **  DIVIDER MIXIN
+/**  DIVIDER MIXIN
  **------------------------------------------*/
 MaterialDivider()
   height 1px
