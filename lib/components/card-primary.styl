@@ -6,6 +6,15 @@
   text-align center
   width 45em
 
+/**  COMPONENTE TITLE
+ **------------------------------------------*/
+.title
+  font-weight 400
+  border-bottom 1px solid $grey-300
+  color rgba($grey-800, .70)
+  margin 0
+  padding-bottom .25em
+
 @media screen and (max-width: 720px)
   .wrapper
     width 100%
@@ -46,6 +55,31 @@
     left 16px
     top 40px
 
+  &__button--inactive
+    display none
+    visibility hidden
+
+  &__button
+  &__button--inactive
+    height 32px
+    line-height 32px
+    position absolute
+    right 0
+    text-decoration none
+    top .5em
+    transition all linear .3s
+    width 32px
+
+    &::after
+      color rgba($grey-800, .87)
+      content'\f19b'
+      font-size 24px
+
+  &:hover .card__button--inactive
+    opacity 0
+    transform rotate(90deg)
+    visibility hidden
+
   &__image-container
     display inline-block
     height 100%
@@ -68,3 +102,8 @@
     padding-right 5px
     &::after
       left 14px
+
+@media screen and (max-width: 720px)
+  .card__button--inactive
+    display block
+    visibility visible
