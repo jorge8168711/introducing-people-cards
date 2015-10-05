@@ -1,20 +1,19 @@
-/**
- **  IMPORTS, NORMALIZE, VARIABLES y MIXINS
+/**  IMPORTS, NORMALIZE, VARIABLES y MIXINS
  **------------------------------------------*/
-@import '../tools/normalize-v3.0.3'
 @import '../tools/material-resources'
+@import '../tools/normalize-v3.0.3'
 
-
-/**
- **  ELEMENTOS SIN CLASE
+/**  ELEMENTOS SIN CLASE
  **------------------------------------------*/
 body
-  background-color rgba(#EEEEEE, .1)
+  background-color $grey-200
 
 img
   max-width 100%
 
-/**
- **  COMPONENTES
+/**  COMPONENTES
  **------------------------------------------*/
-@import '../header/header.styl'
+// @import '../components/header'
+@import '../components/card-primary'
+@import '../components/review-primary'
+@import '../components/social-primary'

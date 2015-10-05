@@ -1,0 +1,42 @@
+/**  COMPONENTE WRAPER
+ **------------------------------------------*/
+.wrapper
+  display block
+  margin 5em auto
+  text-align center
+  width 60em
+
+/**  COMPONENTE CARD
+ **------------------------------------------*/
+.card
+.card::after
+  border-radius .125em
+  height 16em
+  MaterialShadow(1)
+  width 19em
+
+.card
+  background-color white
+  display inline-block
+  margin 1em 3em 3.5em 1em
+  position relative
+
+  &::after
+    background-color rgba($default-primary-color, .6)
+    content ''
+    display block
+    left 10px
+    position absolute
+    top 10px
+    transition all .15s linear
+    z-index -1
+
+  &:hover::after
+    background-color rgba($default-primary-color, 1)
+    left 16px
+    top 40px
+
+  &__image
+    border-radius 2px 0 0 2px
+    display inline-block
+    width 7em
