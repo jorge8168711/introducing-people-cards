@@ -4,21 +4,31 @@
   display block
   margin 5em auto
   text-align center
-  width 60em
+  width 45em
+
+@media screen and (max-width: 720px)
+  .wrapper
+    width 100%
 
 /**  COMPONENTE CARD
  **------------------------------------------*/
 .card
 .card::after
   border-radius .125em
-  height 16em
   MaterialShadow(1)
-  width 19em
+  height $desktop-height
+  width $desktop-width
+
+@media screen and (max-width: 720px)
+  .card
+  .card::after
+    height $mobile-height
+    width $mobile-width
 
 .card
   background-color white
   display inline-block
-  margin 1em 3em 3.5em 1em
+  margin 1em 2em 3.5em 1em
   position relative
 
   &::after
@@ -36,7 +46,25 @@
     left 16px
     top 40px
 
+  &__image-container
+    display inline-block
+    height 100%
+    margin 0
+    overflow hidden
+    width $img-width
+
   &__image
     border-radius 2px 0 0 2px
-    display inline-block
-    width 7em
+    width 100%
+
+@media screen and (max-width: 660px)
+  .card
+    margin 1em 2em 3.5em 2em
+
+@media screen and (max-width: 410px)
+  .card
+    display block
+    margin 1em auto 3.5em auto
+    padding-right 5px
+    &::after
+      left 14px
