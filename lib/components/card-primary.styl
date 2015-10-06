@@ -75,6 +75,7 @@ a[data-icon='true']::after
 
   //botón por default
   &__btn
+    display none
     height 32px
     line-height 32px
     position absolute
@@ -126,7 +127,7 @@ a[data-icon='true']::after
     &::after
       left 14px
 
-@media screen and (max-width: 660px)
+@media screen and (max-width: 560px)
   .card
     margin 1em auto 3.5em auto
 
@@ -135,3 +136,7 @@ a[data-icon='true']::after
   .card::after
     height $mobile-height
     width $mobile-width
+
+@media screen and (max-width: 800px)
+    .card__btn
+      display block
