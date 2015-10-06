@@ -7,7 +7,12 @@
   text-align right
   width 208px
 
-  //hover que activa la caja que contiene los iconos
+  //activa .social por clic
+  &--active
+    height 40px
+    visibility visible
+
+  // activa .social por hover
   /.card:hover > .social
     height 40px
     visibility visible
@@ -26,7 +31,12 @@
     transform scale(0)
     width 52px
 
-    //hover que avtiva los iconos de los links
+    //activa .social__link por clic
+    &--active
+      border-radius 0
+      transform scale(1)
+
+    //activa .social__link por hover
     /.card:hover > .social > .social__link
       border-radius 0
       transform scale(1)
@@ -39,7 +49,7 @@
       height 3px
       left 50%
       position absolute
-      transition all .2s linear
+      transition all .15s linear
       width 0
 
     //hover que activa el borde de los links
