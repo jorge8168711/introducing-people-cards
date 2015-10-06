@@ -1,26 +1,56 @@
+/**  ICONO X DE .card__btn
+ **------------------------------------------*/
+a[data-icon='true']::after
+ animation icon-active .4s linear 0s 1 forwards
+ content'\f136'
+ opacity 0
+ transform rotate(-175deg)
+ visibility hidden
+
+@keyframes icon-active
+ 100%
+   opacity 1
+   transform rotate(0deg)
+   visibility visible
+
 /**  COMPONENTE WRAPER
  **------------------------------------------*/
 .wrapper
   display block
   margin 5em auto
   text-align center
-  width 60em
+  width 45em
+
+@media screen and (max-width: 720px)
+  .wrapper
+    padding-right 3%
+    width 97%
+
+/**  COMPONENTE TITLE
+ **------------------------------------------*/
+.title
+  font-weight 400
+  border-bottom 1px solid $grey-300
+  color rgba($grey-800, .70)
+  margin 0
+  padding-bottom .25em
 
 /**  COMPONENTE CARD
  **------------------------------------------*/
 .card
 .card::after
   border-radius .125em
-  height 16em
   MaterialShadow(1)
-  width 19em
+  height $desktop-height
+  width $desktop-width
 
 .card
   background-color white
   display inline-block
-  margin 1em 3em 3.5em 1em
+  margin 1em 2em 3.5em 1em
   position relative
 
+  //card azul-INACTIVO
   &::after
     background-color rgba($default-primary-color, .6)
     content ''
@@ -31,12 +61,77 @@
     transition all .15s linear
     z-index -1
 
+  //activa .card::after por clic
+  &--active::after
+    background-color rgba($default-primary-color, 1)
+    left 16px
+    top 40px
+
+  // activa .card::after por hover
   &:hover::after
     background-color rgba($default-primary-color, 1)
     left 16px
     top 40px
 
+  //botón por default
+  &__btn
+    height 32px
+    line-height 32px
+    position absolute
+    right 0
+    text-decoration none
+    top .5em
+    transition transform linear .1s
+    width 32px
+
+    //icono del botón
+    &::after
+      animation icon-inactive .25s linear 0s 1 forwards
+      color rgba($grey-800, .87)
+      content'\f19b'
+      font-size 24px
+      opacity 0
+      transform rotate(-175deg)
+      visibility hidden
+
+  @keyframes icon-inactive
+    100%
+      opacity 1
+      transform rotate(0deg)
+      visibility visible
+
+  // desactiva .card__btn por hover
+  &:hover .card__btn
+    opacity 0
+    transform scale(0)
+    visibility hidden
+    z-index -1000
+
+  &__image-container
+    display inline-block
+    height 100%
+    margin 0
+    overflow hidden
+    width $img-width
+
   &__image
     border-radius 2px 0 0 2px
-    display inline-block
-    width 7em
+    width 100%
+
+@media screen and (max-width: 410px)
+  .card
+    display block
+    margin 1em auto 3.5em auto
+    padding-right 5px
+    &::after
+      left 14px
+
+@media screen and (max-width: 660px)
+  .card
+    margin 1em auto 3.5em auto
+
+@media screen and (max-width: 720px)
+  .card
+  .card::after
+    height $mobile-height
+    width $mobile-width
