@@ -3,11 +3,11 @@
 .review
   box-sizing border-box
   display inline-block
-  height 16em
+  height $desktop-height
   padding 1em
   text-align left
   vertical-align top
-  width 12em
+  width ($desktop-width - $img-width)
 
   &__name
   &__city
@@ -15,6 +15,7 @@
     margin 0
 
   &__name
+    padding-right .5em
     color rgba($grey-800, .87)
     font-size 20px
     font-weight 500
@@ -29,3 +30,8 @@
     color rgba($grey-800, .70)
     margin-top 1em
     MaterialText(body-1)
+
+@media screen and (max-width: 720px)
+  .review
+    height $mobile-height
+    width ($mobile-width - $img-width)
