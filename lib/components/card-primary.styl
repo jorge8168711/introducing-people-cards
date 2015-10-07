@@ -29,9 +29,9 @@ a[data-icon='true']::after
 /**  COMPONENTE TITLE
  **------------------------------------------*/
 .title
-  font-weight 400
   border-bottom 1px solid $grey-300
   color rgba($grey-800, .70)
+  font-weight 400
   margin 0
   padding-bottom .25em
 
@@ -120,15 +120,12 @@ a[data-icon='true']::after
     width 100%
 
 @media screen and (max-width: 410px)
-  .card
-    display block
-    margin 1em auto 3.5em auto
-    padding-right 5px
-    &::after
-      left 14px
+  .card::after
+    left 14px
 
 @media screen and (max-width: 560px)
   .card
+    display block
     margin 1em auto 3.5em auto
 
 @media screen and (max-width: 720px)
