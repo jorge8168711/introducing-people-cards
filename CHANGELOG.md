@@ -1,4 +1,10 @@
 # Change Log
+## [0.7.1] - 08 de octubre de 2015
+### Arreglado
+- Bugs en las interacciones de los componentes.
+
+### Mejorado
+- Animaciones de todos los componentes.
 
 ## [0.7.0] - 07 de octubre de 2015
 ### Agregado
