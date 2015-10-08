@@ -2,23 +2,12 @@
  **------------------------------------------*/
 .social
   bottom -40px
-  right -16px
   position absolute
+  right -16px
   text-align right
   width 208px
 
-  //activa .social por clic
-  &--active
-    height 40px
-    visibility visible
-
-  // activa .social por hover
-  /.card:hover > .social
-    height 40px
-    visibility visible
-
   &__link
-    border-radius 50%
     box-sizing border-box
     color white
     display inline-block
@@ -28,18 +17,7 @@
     position relative
     text-align center
     text-decoration none
-    transform scale(0)
     width 52px
-
-    //activa .social__link por clic
-    &--active
-      border-radius 0
-      transform scale(1)
-
-    //activa .social__link por hover
-    /.card:hover > .social > .social__link
-      border-radius 0
-      transform scale(1)
 
     //borde del hover de los links
     &::before
