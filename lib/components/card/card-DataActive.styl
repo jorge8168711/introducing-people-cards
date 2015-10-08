@@ -39,6 +39,11 @@
   transform rotate(0)
   visibility hidden
 
+.card[data-active="active"] > .card__btn:hover
+.card[data-active="inactive"] > .card__btn:hover
+  background-color $grey-100
+  border-radius 50%
+
 /**  INTERCCIONES .social
  **------------------------------------------*/
 .card[data-active="inactive"] > .social

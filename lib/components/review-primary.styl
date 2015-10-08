@@ -15,7 +15,6 @@
     margin 0
 
   &__name
-    padding-right .5em
     color rgba($grey-800, .87)
     font-size 20px
     font-weight 500
@@ -35,3 +34,7 @@
   .review
     height $mobile-height
     width ($mobile-width - $img-width)
+
+@media screen and (max-width: 1024px)
+  .review__name
+    padding-right .5em

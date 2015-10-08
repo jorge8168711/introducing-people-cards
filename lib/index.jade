@@ -16,7 +16,7 @@ html(lang='es')
     include ./components/header/header.jade
     
     div(class='wrapper')
-      h2(class='title') The team
+      h2(class='title') Big cards
       //- CARD1
       div(class='card' data-active='inactive')
         button(title="Social Networks" class='card__btn ico')
@@ -100,7 +100,9 @@ html(lang='es')
           h2(class='review__name') Sarahi Moreno
           h3(class='review__city') Chief creative officer, México
           p(class='review__content') Great mom and awesome front-end developer, able to keep his children quiet while she's writing code.
-
+    
+    include ./components/footer/footer.jade
+    
   //- INCLUDE DE LOS ESTILOS QUE NO SON PRIORIDAD PARA LA PARTE SUPERIOR DEL SITIO.
   link(rel='stylesheet' type='text/css' href='./public/css/main.min.css')
 
