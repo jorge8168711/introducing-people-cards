@@ -4,6 +4,8 @@
 - Footer del sitio.
 - Nuevas animcaciones a los iconos de las redes sociales del nav y los botónes
   que muestran el componentes .social
+- Versión pequeña de los cards.
+- Screenshots finales del readme.md
 
 ## [0.7.1] - 08 de octubre de 2015
 ### Arreglado

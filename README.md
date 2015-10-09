@@ -4,4 +4,5 @@
 
 - Cards useful to introduce people, based in material design guidelines.
 
-![Example screen 1](public/images/screen1.png)
+![Example screen 1](public/images/screen1.jpg)
+![Example screen 2](public/images/screen2.jpg)
