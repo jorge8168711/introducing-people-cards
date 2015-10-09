@@ -2,7 +2,7 @@
  **------------------------------------------*/
 .wrapper
   display block
-  margin 5em auto
+  margin 3.5em auto
   text-align center
   width 45em
 
@@ -28,6 +28,11 @@
   height $desktop-height
   MaterialShadow(1)
   width $desktop-width
+
+.card--small
+.card--small::after
+  height $small-height
+  width $small-width
 
 .card
   background-color white
@@ -71,6 +76,8 @@
     margin 0
     overflow hidden
     width $img-width
+    &--small
+      width $small-img-width
 
   &__image
     border-radius 2px 0 0 2px
@@ -85,6 +92,11 @@
   .card::after
     height $mobile-height
     width $mobile-width
+
+  .card--small
+  .card--small::after
+    height $small-height
+    width $small-width
 
 @media screen and (max-width: 560px)
   .card

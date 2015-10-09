@@ -1,4 +1,10 @@
 # Change Log
+## [0.8.0] - 08 de octubre de 2015
+### Agregado
+- Footer del sitio.
+- Nuevas animcaciones a los iconos de las redes sociales del nav y los botónes
+  que muestran el componentes .social
+
 ## [0.7.1] - 08 de octubre de 2015
 ### Arreglado
 - Bugs en las interacciones de los componentes.
