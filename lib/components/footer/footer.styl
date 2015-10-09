@@ -1,0 +1,46 @@
+/**  COMPONENTE FOOTER
+ **------------------------------------------*/
+.footer
+  background-color rgba(white, .5)
+  border-top 1px solid rgba($grey-800, .36)
+  color rgba($grey-800, .54)
+  display block
+  font-size 1.1em
+  height 50px
+  MaterialShadow(1)
+  text-align center
+  width 100%
+
+/**  COMPONENTE SIGNATURE
+ **------------------------------------------*/
+.signature
+  line-height 50px
+  margin 0
+
+  &__code::before
+    color $light-primary-color
+    content '</>'
+    font-weight bold
+
+  &__heart::before
+    color #E57373
+    content '\f15f'
+    font-family 'Material-Design-Iconic-Font'
+
+  &__name
+    background-color transparent
+    color rgba($grey-800, .87)
+    text-decoration none
+    padding .25em 0
+    transition color .2s linear
+    &:hover
+      color $grey-800
+      text-decoration underline
+
+@media screen and (max-width: 370px)
+  .signature__name
+    text-decoration underline
+
+  .footer
+    font-size 0.975em
+    height auto
