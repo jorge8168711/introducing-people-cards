@@ -51,38 +51,20 @@
     z-index -1
 
   &__title
-    position relative
     color rgba(white, .9)
     display block
     font-weight normal
     margin 0 auto
+    position relative
     width 210px
 
-    &:nth-child(1)::before
-    &:nth-child(2)::after
-      background-color rgba(white, .65)
-      border-radius 2px
-      content ''
-      display block
-      height 24px
-      position absolute
-      width 24px
+@media screen and (max-width: 720px)
+  .header__nav
+    height 48px
 
-    &:nth-child(1)
-      padding-bottom .18em
-      &::before
-        box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.11),
-                   0 2px 10px 0 rgba(0, 0, 0, 0.12),
-                   -4px -4px 0 rgba(white, .35)
-        left 2px
-        top 0
-
-    &:nth-child(2)
-      border-top 1px solid rgba(255,255,255,.85)
-      padding-top .1em
-      &::after
-        bottom 0
-        box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.11),
-                   0 2px 10px 0 rgba(0, 0, 0, 0.12),
-                   4px 4px 0 rgba(white, .35)
-        right 2px
+  .header__link
+    font-size 24px
+    height 48px
+    line-height 48px
+    padding 0
+    width 48px
