@@ -42,33 +42,39 @@
 
   //card azul-INACTIVO
   &::after
+    background-color $default-primary-color
     content ''
     display block
-    left 10px
+    left 0
+    opacity .6
     position absolute
-    top 10px
-    transition all .15s linear
+    top 0
+    transform translateX(10px) translateY(10px)
+    transition transform .15s linear
     z-index -1
 
   //botón por default
   &__btn
     background-color transparent
+    border-radius 50%
     display none
     height 32px
     line-height 32px
     position absolute
     right 0
     text-decoration none
-    top .5em
-    transition all .2s linear
+    top .15em
+    transition background-color .2s linear
     width 32px
 
     //icono del botón
     &::before
+      transition transform .2s linear
       color rgba($grey-800, .87)
       display block
-      font-size 24px
+      font-size 18px
       margin auto
+      transform rotate(0deg)
 
   &__image-container
     display inline-block

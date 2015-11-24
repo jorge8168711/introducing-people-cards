@@ -1,48 +1,42 @@
 /**  INTERACCIONES .card::after
  **------------------------------------------*/
 
-//card desactivado
+// card desactivado
 .card[data-active="inactive"]::after
-  background-color rgba($default-primary-color, .6)
-  left 10px
-  top 10px
+  opacity .6
+  transform translateX(10px) translateY(10px)
 
 //card activado con clic
 .card[data-active="active"]::after
-  background-color rgba($default-primary-color, 1)
-  left 16px
-  top 40px
+  opacity 1
+  transform translateX(16px) translateY(40px)
 
 //card activado con hover por encima de 1025px
 @media screen and (min-width: 1025px)
   .card[data-active="inactive"]:hover::after
-    background-color rgba($default-primary-color, 1)
-    left 16px
-    top 40px
+    opacity 1
+    transform translateX(16px) translateY(40px)
+
+
 
 /**  INTERACCIONES .card__btn
  **------------------------------------------*/
 
 //card__btn desactivado
-.card[data-active="inactive"] > .card__btn::after
-  animation icon-more .3s linear 0s 1 normal forwards
+.card[data-active="inactive"] > .card__btn::before
   content '\f19b' // \f19b
-  opacity 0
-  transform rotate(0)
-  visibility hidden
+  // opacity 1
+  transform rotate(0deg)
 
 //card__btn activado
-.card[data-active="active"] > .card__btn::after
-  animation icon-close .3s linear 0s 1 normal forwards
+.card[data-active="active"] > .card__btn::before
   content '\f136' // \f136
-  opacity 0
-  transform rotate(0)
-  visibility hidden
+  // opacity 1
+  transform rotate(-90deg)
 
 .card[data-active="active"] > .card__btn:hover
 .card[data-active="inactive"] > .card__btn:hover
   background-color $grey-100
-  border-radius 50%
 
 /**  INTERCCIONES .social
  **------------------------------------------*/
