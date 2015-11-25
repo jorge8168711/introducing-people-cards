@@ -1,5 +1,5 @@
 # Change Log
-## [0.3.0] - 24 de noviembre de 2015
+## [0.8.3] - 24 de noviembre de 2015
 ### Mejoras
 - Mejoras en el rendimiento de todas las animaciones del componente card.
 
