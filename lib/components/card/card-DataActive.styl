@@ -1,48 +1,40 @@
 /**  INTERACCIONES .card::after
  **------------------------------------------*/
 
-//card desactivado
+// card desactivado
 .card[data-active="inactive"]::after
-  background-color rgba($default-primary-color, .6)
-  left 10px
-  top 10px
+  opacity .6
+  transform translate3d(10px, 10px, 0)
 
 //card activado con clic
 .card[data-active="active"]::after
-  background-color rgba($default-primary-color, 1)
-  left 16px
-  top 40px
+  opacity 1
+  transform translate3d(16px, 40px, 0)
 
 //card activado con hover por encima de 1025px
 @media screen and (min-width: 1025px)
   .card[data-active="inactive"]:hover::after
-    background-color rgba($default-primary-color, 1)
-    left 16px
-    top 40px
+    opacity 1
+    transform translate3d(16px, 40px, 0)
+
+
 
 /**  INTERACCIONES .card__btn
  **------------------------------------------*/
 
 //card__btn desactivado
-.card[data-active="inactive"] > .card__btn::after
-  animation icon-more .3s linear 0s 1 normal forwards
+.card[data-active="inactive"] > .card__btn::before
   content '\f19b' // \f19b
-  opacity 0
-  transform rotate(0)
-  visibility hidden
+  transform rotate(0deg)
 
 //card__btn activado
-.card[data-active="active"] > .card__btn::after
-  animation icon-close .3s linear 0s 1 normal forwards
+.card[data-active="active"] > .card__btn::before
   content '\f136' // \f136
-  opacity 0
-  transform rotate(0)
-  visibility hidden
+  transform rotate(-90deg)
 
 .card[data-active="active"] > .card__btn:hover
 .card[data-active="inactive"] > .card__btn:hover
   background-color $grey-100
-  border-radius 50%
 
 /**  INTERCCIONES .social
  **------------------------------------------*/
@@ -64,14 +56,31 @@
  **------------------------------------------*/
 .card[data-active="inactive"] > .social >.social__link
   border-radius 50%
-  transform scale(0)
+  transform scale3d(0, 0, 0)
 
 .card[data-active="active"] > .social >.social__link
-  border-radius 0
-  transform scale(1)
+  &:nth-child(1)
+    animation links .15s linear .65s 1 normal forwards
+  &:nth-child(2)
+    animation links .15s linear .50s 1 normal forwards
+  &:nth-child(3)
+    animation links .15s linear .35s 1 normal forwards
+  &:nth-child(4)
+    animation links .15s linear .2s 1 normal forwards
 
 //.social__link activado con hover por encima de 1025px
 @media screen and (min-width: 1025px)
   .card[data-active="inactive"]:hover > .social >.social__link
+    &:nth-child(1)
+      animation links .15s linear .65s 1 normal forwards
+    &:nth-child(2)
+      animation links .15s linear .50s 1 normal forwards
+    &:nth-child(3)
+      animation links .15s linear .35s 1 normal forwards
+    &:nth-child(4)
+      animation links .15s linear .2s 1 normal forwards
+
+@keyframes links
+  100%
     border-radius 0
-    transform scale(1)
+    transform scale3d(1, 1, 1)
