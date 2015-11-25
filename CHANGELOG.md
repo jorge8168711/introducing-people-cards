@@ -1,4 +1,8 @@
 # Change Log
+## [0.3.0] - 24 de noviembre de 2015
+### Mejoras
+- Mejoras en el rendimiento de todas las animaciones del componente card.
+
 ## [0.8.0] - 08 de octubre de 2015
 ### Agregado
 - Footer del sitio.
