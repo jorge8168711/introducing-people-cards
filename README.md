@@ -1,8 +1,4 @@
-#Introducing people cards.
-
-- Cards útiles para presentar gente, basados en las especificaiones de material design.
-
-- Cards useful to introduce people, based in material design guidelines.
+# Introducing people cards.
 
 ![Example screen 1](public/images/screen1.jpg)
 ![Example screen 2](public/images/screen2.jpg)
